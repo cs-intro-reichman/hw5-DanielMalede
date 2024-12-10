@@ -73,7 +73,8 @@ public class MyString {
             }
         }
         if (word != "") {
-            word += str.charAt(str.length() - 1);
+            char none = '\u0000';
+            word.replace(word.charAt(word.length()-1),none);
         }
         return word;
     }
