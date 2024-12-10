@@ -84,9 +84,9 @@ public class MyString {
     //// Replace the following statement with your code
     String engChrs = "abcdefghijklmnopqrstuvwxyz";
     if (n>0) {
-        System.out.print(engChrs.charAt(Math.round(n)));
+        System.out.print(engChrs.charAt(Math.round(n)* 26));
     }
-    return "d";
+    return "";
     }
 
     /**
