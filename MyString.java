@@ -70,7 +70,7 @@ public class MyString {
      */
     public static String spacedString(String str) {
         //// Replace the following statement with your code
-        String word = "";
+        String word = " ";
         for (int i = 0; i < str.length(); i++) {
             if (str.length() > 0) {
                 word += (" " + str.charAt(i));
