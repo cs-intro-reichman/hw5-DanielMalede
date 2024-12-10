@@ -49,6 +49,13 @@ public class MyString {
         if (str2.contains(str1)) {
             return true;
         }
+        for(int i =0 ; i < str1.length();i++){
+            for(int j=0;j<str2.length();j++){
+                if (str1.charAt(i)== str2.charAt(j)) {
+                    
+                }
+            }
+        }
         return false;
     }
 
@@ -63,12 +70,13 @@ public class MyString {
      */
     public static String spacedString(String str) {
         //// Replace the following statement with your code
+        String word = "";
         for (int i = 0; i < str.length(); i++) {
             if (str.length() > 0) {
-                System.out.print(" " + str.charAt(i));
+                word += " " + str.charAt(i);
             }
         }
-        return "";
+        return word;
     }
 
     /**
