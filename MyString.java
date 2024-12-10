@@ -45,12 +45,12 @@ public class MyString {
      */
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
-        for(int i =0 ; i < str1.length();i++){
-        char word = str1.charAt(i);
-        if (countChar(str1, word)> countChar(str2, word)) {
-            return false;
-        }            
-            
+        for (int i = 0; i < str1.length(); i++) {
+            char word = str1.charAt(i);
+            if (countChar(str1, word) > countChar(str2, word)) {
+                return false;
+            }
+
         }
         return true;
     }
@@ -67,12 +67,14 @@ public class MyString {
     public static String spacedString(String str) {
         //// Replace the following statement with your code
         String word = "";
-        for (int i = 0; i < str.length()-1; i++) {
+        for (int i = 0; i < str.length() - 1; i++) {
             if (str.length() > 0) {
-                word += (str.charAt(i) +" ");
+                word += (str.charAt(i) + " ");
             }
         }
-        word+= str.charAt(str.length()-1);
+        if (word != "") {
+            word += str.charAt(str.length() - 1);
+        }
         return word;
     }
 
@@ -89,15 +91,15 @@ public class MyString {
     public static String randomStringOfLetters(int n) {
         //// Replace the following statement with your code
         String engChars = "abcdefghijklmnopqrstuvwxyz";
-        int random = (int) (Math.random()*27);
+        int random = (int) (Math.random() * 27);
         String word = "";
         for (int i = 0; i < n; i++) {
-          if (n > 0) {
-            word += engChars.charAt(random);
-          }
+            if (n > 0) {
+                word += engChars.charAt(random);
+            }
         }
         return word;
-      }
+    }
 
     /**
      * Returns a string consisting of the string str1, minus all the characters in
@@ -115,7 +117,7 @@ public class MyString {
         for (int i = 0; i < str2.length(); i++) {
             for (int j = 0; j < str1.length(); j++) {
                 if (str2.charAt(i) == str1.charAt(j)) {
-                    str1.replace(str2.charAt(i),none.charAt(0) );
+                    str1.replace(str2.charAt(i), none.charAt(0));
                 }
             }
         }
