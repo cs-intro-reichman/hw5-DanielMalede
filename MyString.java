@@ -68,7 +68,7 @@ public class MyString {
                 System.out.print(" " + str.charAt(i));
             }
         }
-        return null;
+        return "";
     }
 
     /**
