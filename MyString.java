@@ -64,7 +64,7 @@ public class MyString {
         //// Replace the following statement with your code
         for (int i = 0; i < str.length(); i++) {
             if (str.length() > 0) {
-                System.out.print(str.charAt(i) + " ");
+                System.out.print(" " + str.charAt(i));
             }
         }
         return null;
@@ -81,12 +81,12 @@ public class MyString {
      * @return a randomly generated string, consisting of 'n' lowercase letters
      */
     public static String randomStringOfLetters(int n) {
-    //// Replace the following statement with your code
-    String engChars = "abcdefghijklmnopqrstuvwxyz";
-    if (n>0) {
-        System.out.print(" " +engChars.charAt(Math.round(25)));
-    }
-    return "";
+        //// Replace the following statement with your code
+        String engChars = "abcdefghijklmnopqrstuvwxyz";
+        if (n > 0) {
+            System.out.print(" " + engChars.charAt(Math.round(25)));
+        }
+        return "";
     }
 
     /**
@@ -100,15 +100,15 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-    //// Replace the following statement with your code
-    for (int i = 0; i <str1.length();i++){
-        for( int j= 0; j <str2.length();j++){
-            if (str1.charAt(i)==str2.charAt(j)) {
-                str2.substring(i,i);
+        //// Replace the following statement with your code
+        for (int i = 0; i < str1.length(); i++) {
+            for (int j = 0; j < str2.length(); j++) {
+                if (str1.charAt(i) == str2.charAt(j)) {
+                    str2.substring(i, i);
+                }
             }
         }
-    }
-    return str2;
+        return str2;
     }
 
     /**
@@ -122,11 +122,11 @@ public class MyString {
      * @return a string consisting of str with ch inserted somewhere
      */
     public static String insertRandomly(char ch, String str) {
-    // Generate a random index between 0 and str.length()
-    int randomIndex = (int) (Math.random() * (str.length() + 1));
-    // Insert the character at the random index
-    String result = str.substring(0, randomIndex) + ch +
-    str.substring(randomIndex);
-    return result;
+        // Generate a random index between 0 and str.length()
+        int randomIndex = (int) (Math.random() * (str.length() + 1));
+        // Insert the character at the random index
+        String result = str.substring(0, randomIndex) + ch +
+                str.substring(randomIndex);
+        return result;
     }
 }
