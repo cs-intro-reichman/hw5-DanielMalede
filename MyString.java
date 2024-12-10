@@ -82,9 +82,9 @@ public class MyString {
      */
     public static String randomStringOfLetters(int n) {
     //// Replace the following statement with your code
-    String engChrs = "abcdefghijklmnopqrstuvwxyz";
+    String engChars = "abcdefghijklmnopqrstuvwxyz";
     if (n>0) {
-        System.out.print(engChrs.charAt(Math.round(n)* 26));
+        System.out.print(engChars.charAt(Math.round(n)* 26));
     }
     return "";
     }
