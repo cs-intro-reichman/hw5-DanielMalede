@@ -111,7 +111,7 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
-        String none = " ";
+        String none = "";
         for (int i = 0; i < str2.length(); i++) {
             for (int j = 0; j < str1.length(); j++) {
                 if (str2.charAt(i) == str1.charAt(j)) {
