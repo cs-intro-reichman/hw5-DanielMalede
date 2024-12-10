@@ -46,10 +46,6 @@ public class MyString {
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
         int sum = 0;
-        if(str2.length()==0) return false;
-        if (str2.contains(str1)) {
-            return true;
-        }
         for(int i =0 ; i < str1.length();i++){
             for(int j=0;j<str2.length();j++){
                 if (str1.charAt(i)== str2.charAt(j)) {
@@ -58,7 +54,7 @@ public class MyString {
             }
         }
         if (sum == str1.length()) {
-            return false;
+            return true;
         }
         return false;
     }
