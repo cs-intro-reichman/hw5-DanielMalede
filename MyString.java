@@ -72,6 +72,7 @@ public class MyString {
                 word += (str.charAt(i) +" ");
             }
         }
+        word.substring(word.length()-1,word.length()-1);
         return word;
     }
 
