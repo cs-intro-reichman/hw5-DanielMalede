@@ -45,6 +45,7 @@ public class MyString {
      */
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
+        if(str2.length()==0) return false;
         if (str2.contains(str1)) {
             return true;
         }
