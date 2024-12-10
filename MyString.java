@@ -60,10 +60,15 @@ public class MyString {
      * @param str - a string
      * @return a string consisting of the characters of str, separated by spaces.
      */
-    // public static String spacedString(String str) {
-    //     //// Replace the following statement with your code
-    //     return null;
-    // }
+    public static String spacedString(String str) {
+        //// Replace the following statement with your code
+        for (int i = 0; i < str.length(); i++) {
+            if (str.length() > 0) {
+                System.out.print(str.charAt(i) + " ");
+            }
+        }
+        return null;
+    }
 
     /**
      * Returns a string of n lowercase letters, selected randomly from
@@ -76,8 +81,8 @@ public class MyString {
      * @return a randomly generated string, consisting of 'n' lowercase letters
      */
     // public static String randomStringOfLetters(int n) {
-    //     //// Replace the following statement with your code
-    //     return null;
+    // //// Replace the following statement with your code
+    // return null;
     // }
 
     /**
@@ -91,8 +96,8 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     // public static String remove(String str1, String str2) {
-    //     //// Replace the following statement with your code
-    //     return null;
+    // //// Replace the following statement with your code
+    // return null;
     // }
 
     /**
@@ -106,10 +111,11 @@ public class MyString {
      * @return a string consisting of str with ch inserted somewhere
      */
     // public static String insertRandomly(char ch, String str) {
-    //     // Generate a random index between 0 and str.length()
-    //     int randomIndex = (int) (Math.random() * (str.length() + 1));
-    //     // Insert the character at the random index
-    //     String result = str.substring(0, randomIndex) + ch + str.substring(randomIndex);
-    //     return result;
+    // // Generate a random index between 0 and str.length()
+    // int randomIndex = (int) (Math.random() * (str.length() + 1));
+    // // Insert the character at the random index
+    // String result = str.substring(0, randomIndex) + ch +
+    // str.substring(randomIndex);
+    // return result;
     // }
 }
