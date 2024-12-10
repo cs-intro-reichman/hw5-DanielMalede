@@ -112,14 +112,14 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String none = " ";
-        for (int i = 0; i < str1.length(); i++) {
-            for (int j = 0; j < str2.length(); j++) {
-                if (str1.charAt(i) == str2.charAt(j)) {
-                    str2.replace(str1.charAt(i),none.charAt(0) );
+        for (int i = 0; i < str2.length(); i++) {
+            for (int j = 0; j < str1.length(); j++) {
+                if (str2.charAt(i) == str1.charAt(j)) {
+                    str1.replace(str2.charAt(i),none.charAt(0) );
                 }
             }
         }
-        return str2;
+        return str1;
     }
 
     /**
