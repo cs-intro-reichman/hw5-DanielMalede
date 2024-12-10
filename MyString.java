@@ -89,12 +89,15 @@ public class MyString {
     public static String randomStringOfLetters(int n) {
         //// Replace the following statement with your code
         String engChars = "abcdefghijklmnopqrstuvwxyz";
+        int random = (int) (Math.random()*27);
         String word = "";
-        if (n > 0) {
-           word+= engChars.charAt((int)Math.random()* 26);
+        for (int i = 0; i < n; i++) {
+          if (n > 0) {
+            word += engChars.charAt(random);
+          }
         }
         return word;
-    }
+      }
 
     /**
      * Returns a string consisting of the string str1, minus all the characters in
