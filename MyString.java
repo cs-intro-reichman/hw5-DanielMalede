@@ -77,7 +77,7 @@ public class MyString {
                 word += (" " + str.charAt(i));
             }
         }
-        return word;
+        return " "+word;
     }
 
     /**
