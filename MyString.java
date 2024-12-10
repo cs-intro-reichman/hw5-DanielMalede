@@ -93,9 +93,9 @@ public class MyString {
         //// Replace the following statement with your code
         String engChars = "abcdefghijklmnopqrstuvwxyz";
         if (n > 0) {
-            System.out.print(" " + engChars.charAt((int)Math.random()* 26));
+            System.out.print(engChars.charAt((int)Math.random()* 26));
         }
-        return "";
+        return null;
     }
 
     /**
