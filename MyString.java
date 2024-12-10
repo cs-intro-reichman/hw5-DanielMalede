@@ -72,7 +72,9 @@ public class MyString {
                 word += (str.charAt(i) + " ");
             }
         }
-        word+=str.charAt(str.length()-1);
+        if (word.length()>0) {
+            word+=str.charAt(str.length()-1);
+        }
         return word;
     }
 
@@ -111,15 +113,15 @@ public class MyString {
      */
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
-        char none = '\u0000';
+        String newWord = "";
         for (int i = 0; i < str2.length(); i++) {
             for (int j = 0; j < str1.length(); j++) {
-                if (str2.charAt(i) == str1.charAt(j)) {
-                    str1.replace(str1.charAt(j), none);
+                if (str2.charAt(i) != str1.charAt(j)) {
+                    newWord+=str1.charAt(j);
                 }
             }
         }
-        return str1;
+        return newWord;
     }
 
     /**
