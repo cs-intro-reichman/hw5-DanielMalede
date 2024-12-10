@@ -74,7 +74,7 @@ public class MyString {
         }
         if (word != "") {
             char none = '\u0000';
-            word.replace(word.charAt(word.length()-1),none);
+            word.replace(word.charAt(word.length()),none);
         }
         return word;
     }
