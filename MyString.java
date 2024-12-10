@@ -45,19 +45,14 @@ public class MyString {
      */
     public static boolean subsetOf(String str1, String str2) {
         //// Replace the following statement with your code
-        int sum = 0;
         for(int i =0 ; i < str1.length();i++){
-            for(int j=0;j<str2.length();j++){
-                if (str1.charAt(i)== str2.charAt(j)) {
-                    sum++;
-                    break;
-                }
-            }
+        char word = str1.charAt(i);
+        if (countChar(str1, word)> countChar(str2, word)) {
+            return false;
+        }            
+            
         }
-        if (sum == str1.length()) {
-            return true;
-        }
-        return false;
+        return true;
     }
 
     /**
@@ -74,10 +69,10 @@ public class MyString {
         String word = "";
         for (int i = 0; i < str.length(); i++) {
             if (str.length() > 0) {
-                word += (" " + str.charAt(i));
+                word += (str.charAt(i) +" ");
             }
         }
-        return " "+word;
+        return word;
     }
 
     /**
