@@ -92,10 +92,11 @@ public class MyString {
     public static String randomStringOfLetters(int n) {
         //// Replace the following statement with your code
         String engChars = "abcdefghijklmnopqrstuvwxyz";
+        String word = "";
         if (n > 0) {
-            System.out.print(engChars.charAt((int)Math.random()* 26));
+           word+= engChars.charAt((int)Math.random()* 26);
         }
-        return null;
+        return word;
     }
 
     /**
@@ -113,7 +114,7 @@ public class MyString {
         for (int i = 0; i < str1.length(); i++) {
             for (int j = 0; j < str2.length(); j++) {
                 if (str1.charAt(i) == str2.charAt(j)) {
-                    str2.substring(i, i);
+                    str2.replace(str1.charAt(i), );
                 }
             }
         }
