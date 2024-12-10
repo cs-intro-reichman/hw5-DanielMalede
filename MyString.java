@@ -80,10 +80,14 @@ public class MyString {
      * @param n - the number of letter to select
      * @return a randomly generated string, consisting of 'n' lowercase letters
      */
-    // public static String randomStringOfLetters(int n) {
-    // //// Replace the following statement with your code
-    // return null;
-    // }
+    public static String randomStringOfLetters(int n) {
+    //// Replace the following statement with your code
+    String engChrs = "abcdefghijklmnopqrstuvwxyz";
+    if (n>0) {
+        System.out.print(engChrs.charAt(Math.round(n)));
+    }
+    return "d";
+    }
 
     /**
      * Returns a string consisting of the string str1, minus all the characters in
@@ -95,10 +99,10 @@ public class MyString {
      * @param str2 - a string
      * @return a string consisting of str1 minus all the characters of str2
      */
-    // public static String remove(String str1, String str2) {
-    // //// Replace the following statement with your code
-    // return null;
-    // }
+    public static String remove(String str1, String str2) {
+    //// Replace the following statement with your code
+    return null;
+    }
 
     /**
      * Returns a string consisting of the given string, with the given
@@ -110,12 +114,12 @@ public class MyString {
      * @param str - a string
      * @return a string consisting of str with ch inserted somewhere
      */
-    // public static String insertRandomly(char ch, String str) {
-    // // Generate a random index between 0 and str.length()
-    // int randomIndex = (int) (Math.random() * (str.length() + 1));
-    // // Insert the character at the random index
-    // String result = str.substring(0, randomIndex) + ch +
-    // str.substring(randomIndex);
-    // return result;
-    // }
+    public static String insertRandomly(char ch, String str) {
+    // Generate a random index between 0 and str.length()
+    int randomIndex = (int) (Math.random() * (str.length() + 1));
+    // Insert the character at the random index
+    String result = str.substring(0, randomIndex) + ch +
+    str.substring(randomIndex);
+    return result;
+    }
 }
