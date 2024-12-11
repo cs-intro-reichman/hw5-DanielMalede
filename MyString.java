@@ -67,13 +67,14 @@ public class MyString {
     public static String spacedString(String str) {
         //// Replace the following statement with your code
         String word = "";
-        for (int i = 0; i < str.length()-1; i++) {
-            if (str.length() > 0) {
-                word += (str.charAt(i) + " ");
+        for (int i = 0; i < str.length(); i++) {
+            word += str.charAt(i);
+            if (i < str.length() - 1) {
+                word += " ";
             }
         }
-        if (word.length()>0) {
-            word+=str.charAt(str.length()-1);
+        if (str.length() == 0) {
+            return word;
         }
         return word;
     }
@@ -114,10 +115,12 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String newWord = "";
-        for (int i = 0; i < str2.length(); i++) {
-            for (int j = 0; j < str1.length(); j++) {
-                if (str2.charAt(i) != str1.charAt(j)) {
-                    newWord+=str1.charAt(j);
+        for (int i = 0; i < str2.length(); i++) { // committee
+            for (int j = 0; j < str1.length(); j++) { // meet
+                if (str2.charAt(i) == str1.charAt(j)) {
+                    StringBuilder s = new StringBuilder(str2);
+                    s.deleteCharAt(i);
+                    newWord = s.toString();
                 }
             }
         }
