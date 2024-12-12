@@ -91,11 +91,10 @@ public class MyString {
      */
     public static String randomStringOfLetters(int n) {
         //// Replace the following statement with your code
-        char random =(char) ('a' + (int) Math.random() * 26);
         String word = "";
         for (int i = 0; i < n; i++) {
             if (n > 0) {
-                word +=  random;
+                word += (char) ('a' + (int) (Math.random() * 26));
             }
         }
         return word;
