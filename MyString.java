@@ -115,8 +115,11 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String newWord = "";
-        if (str1.length() == 0 || str2.length() == 0 || str1 == str2) {
+        if (str1.length() == 0 || str1 == str2) {
             return newWord;
+        }
+        if (str2.length() == 0) {
+            return str1;
         }
         for (int i = 0; i < str1.length(); i++) {
             char word = str1.charAt(i);
