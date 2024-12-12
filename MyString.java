@@ -115,13 +115,16 @@ public class MyString {
     public static String remove(String str1, String str2) {
         //// Replace the following statement with your code
         String newWord = "";
-        for (int i = 0; i < str2.length(); i++) { // committee
-            for (int j = 0; j < str1.length(); j++) { // meet
-                if (str2.charAt(i) == str1.charAt(j)) {
-                    StringBuilder s = new StringBuilder(str2);
-                    s.deleteCharAt(i);
-                    newWord = s.toString();
-                }
+        if (str1.length() == 0 || str2.length() == 0 || str1 == str2) {
+            return newWord;
+        }
+        for (int i = 0; i < str1.length(); i++) {
+            char word = str1.charAt(i);
+            int index = str2.indexOf(word);
+            if (index == -1) {
+                newWord += word;
+            } else {
+                str2 = str2.substring(0, index) + str2.substring(index + 1);
             }
         }
         return newWord;
