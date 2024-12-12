@@ -81,6 +81,10 @@ public class Scrabble {
 	// (these two vowels make it easier for the user to construct words)
 	public static String createHand() {
 		//// Replace the following statement with your code
+		String hand = MyString.randomStringOfLetters(HAND_SIZE - 2);
+		
+        hand = MyString.insertRandomly('a', hand);
+        hand = MyString.insertRandomly('e', hand);
 		return null;
 	}
 
