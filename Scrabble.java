@@ -66,9 +66,13 @@ public class Scrabble {
 		//// Replace the following statement with your code
 		String runi = "runi";
 		int score = 0;
+		if (word.length() == 0) {
+			return 0;
+		}
 		for (int i = 0; i < word.length(); i++) {
 			score += SCRABBLE_LETTER_VALUES[word.charAt(i) -'a'];
 		}
+		score *= word.length();
 		if (MyString.subsetOf(runi, word)) {
 			score += 1000;
 		}
