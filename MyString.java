@@ -92,7 +92,7 @@ public class MyString {
     public static String randomStringOfLetters(int n) {
         //// Replace the following statement with your code
         String engChars = "abcdefghijklmnopqrstuvwxyz";
-        int random = (int) (Math.random() * 27);
+        int random = (int) ('a' + (int) Math.random() * 26);
         String word = "";
         for (int i = 0; i < n; i++) {
             if (n > 0) {
