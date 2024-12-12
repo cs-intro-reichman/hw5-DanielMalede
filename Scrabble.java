@@ -67,12 +67,12 @@ public class Scrabble {
 		String runi = "runi";
 		int score = 0;
 		for (int i = 0; i < word.length(); i++) {
-			if (word.indexOf(runi, i) != -1) {
-				score += 1000;
-			}
 			score += SCRABBLE_LETTER_VALUES[word.charAt(i) -'a'];
-			score += (word.length() == HAND_SIZE) ? 50 : 0;
 		}
+		if (MyString.subsetOf(runi, word)) {
+			score += 1000;
+		}
+		score += (word.length() == HAND_SIZE) ? 50 : 0;
 		return score;
 	}
 
