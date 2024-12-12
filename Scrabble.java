@@ -66,13 +66,13 @@ public class Scrabble {
 		//// Replace the following statement with your code
 		String runi = "runi";
 		int score = 0;
-		// for (int i = 0; i < word.length(); i++) {
-		// 	if ((word.indexOf(runi, i) != -1)) {
-		// 		score += 1000;
-		// 	}
-		// 	score += SCRABBLE_LETTER_VALUES[word.charAt(i)];
-		// 	score += (word.length() == HAND_SIZE - 2) ? 50 : 0;
-		// }
+		for (int i = 0; i < word.length(); i++) {
+			if ((word.indexOf(runi, i) != -1)) {
+				score += 1000;
+			}
+			score += SCRABBLE_LETTER_VALUES[word.charAt(i) -'a'];
+			score += (word.length() == HAND_SIZE) ? 50 : 0;
+		}
 		return score;
 	}
 
