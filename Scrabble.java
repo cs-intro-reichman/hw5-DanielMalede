@@ -119,7 +119,22 @@ public class Scrabble {
 			String input = in.readString();
 			//// Replace the following break statement with code
 			//// that completes the hand playing loop
-			break;
+			if (input.equals(".")) {
+				break;
+
+			}
+			if (isWordInDictionary(input) && (MyString.subsetOf(input, hand))) {
+				hand = MyString.remove(hand, input);
+				n -= hand.length();
+				score += Scrabble.wordScore(input);
+				System.out.println("" + input + " earned " + (Scrabble.wordScore(input)) + " points. Score: "
+						+ score + " points");
+				System.out.println();
+			} else if ((!isWordInDictionary(input)) || (!MyString.subsetOf(input, hand))) {
+				System.out.println("Invalid word. Try again.");
+			}
+			if ((n > 0) == true ? true : false)
+				;			
 		}
 		if (hand.length() == 0) {
 			System.out.println("Ran out of letters. Total score: " + score + " points");
