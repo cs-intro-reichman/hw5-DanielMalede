@@ -94,7 +94,7 @@ public class Scrabble {
 		
         hand = MyString.insertRandomly('a', hand);
         hand = MyString.insertRandomly('e', hand);
-		return null;
+		return hand;
 	}
 
 	// Runs a single hand in a Scrabble game. Each time the user enters a valid
