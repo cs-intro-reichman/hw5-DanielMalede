@@ -70,7 +70,7 @@ public class Scrabble {
 			if ((word.indexOf(runi, i) != -1)) {
 				score += 1000;
 			}
-			score += SCRABBLE_LETTER_VALUES[word.charAt(i) -'a'];
+			score += SCRABBLE_LETTER_VALUES[word.charAt(i) ];
 			score += (word.length() == HAND_SIZE) ? 50 : 0;
 		}
 		return score;
